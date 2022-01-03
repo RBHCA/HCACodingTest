@@ -1,0 +1,42 @@
+﻿@model KidsPuzzles.Models.KidsPuzzleViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Kids Puzzle</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PuzzleName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PuzzleName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PuzzleDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PuzzleDescription)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PuzzlePrice)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PuzzlePrice)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PuzzleRating)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PuzzleRating)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PuzzleID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
